@@ -1,0 +1,99 @@
+#include<iostream>
+using namespace std;
+
+class basketball{
+
+private:
+
+int size_of_the_ball;
+int floor_perimeter;
+string mvp;
+string assist_king;
+string highest_3pm_made;
+string defensive_player;
+
+public:
+int teams;
+string fav_team;
+string best_team;
+string worst_team;
+
+basketball()// I have a constructor called basketball that takes the same name as the class name. we will add parameters to this class object.
+{
+
+/*string mvp;
+string assist_king;
+int highest_3pm_made;
+string defensive_player;
+*/
+}
+
+//write functions to impliment this. keep in mind that all I am doing is using a constructor inside a class.
+void details_of_basketball()
+{
+
+ cout<<"Enter the size of the basketball: ";
+ cin>>size_of_the_ball;
+ cout<<"Enter the perimeter of the basketball court: ";
+ cin>>floor_perimeter;
+
+ cout<<"How many teams play in the nba league: "<<endl;
+ cin>>teams;
+ cout<<"What is your favourite team: "<<endl;
+ getline(cin,fav_team);
+ cout<<"What is the best team in the nba: "<<endl;
+ getline(cin,best_team);
+ cout<<"What is the worst team in the nba: "<<endl;
+ getline(cin,worst_team);
+
+}
+
+void player_details()
+{
+
+ cout<<"Who is the league mvp: "<<endl;
+ getline(cin,mvp);
+ cout<<"Who has most assists in the league: "<<endl;
+ getline(cin,assist_king);
+ cout<<"who has made the most 3pointers in the nba in 2023/2024: "<<endl;
+ getline(cin,highest_3pm_made);
+ cout<<"Who is the current defensive player of the year: ";
+ getline(cin,defensive_player);
+}
+
+void display_details_of_basketball()
+{
+
+ cout<<"The size of the basketball is "<<size_of_the_ball<<" while the perimeter of the court is "<<floor_perimeter<<endl;
+ cout<<"teams that play in the league are "<<teams<<"in number"<<"while your favourite team is"<<fav_team<<endl;
+ cout<<"The best team in the nba is "<<best_team<<"while "<<worst_team<<"is the worst team in the league now";
+
+}
+
+void display_player_details()
+{
+
+ cout<<mvp<<"Is the leagues mvp";
+ cout<<assist_king<<"Is the leagues assist king";
+ cout<<highest_3pm_made<<"has the highest number of threes in the league";
+ cout<<defensive_player<<"is the dopy";
+
+}
+
+
+};
+
+int main()
+{
+
+  basketball b;
+
+  b.details_of_basketball();
+  b.player_details();
+  b.display_details_of_basketball();
+  b.display_player_details();
+
+return 0;
+
+
+}
